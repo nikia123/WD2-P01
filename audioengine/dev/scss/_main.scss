@@ -1,5 +1,29 @@
-@use "typography" as *; 
+@use "variables" as *;
+@use "mixins" as *;
 @use "colour" as *;
+@use "typography" as *;
+
+.news-wrap {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        margin: 10rem;
+    }
+    
+}
+
+.news-wrap {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        margin: 10rem;
+    }
+    
+}
+
+
 
 // Back to top 
 .back-to-top { 
