@@ -44,7 +44,9 @@
 }
 .right-side-icon { 
     float: right;
-    // NEST A tag in white 
+    span { 
+        color: $blackColor;
+    }
     
 }
 }
