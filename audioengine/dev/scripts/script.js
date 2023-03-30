@@ -52,16 +52,9 @@ $(document).ready(function(){
     })
 
 })
-// Play Button 
-
-// let btn = document.querySelector(".btn"); 
-// let videoClip = document.querySelector("video-clip");
-// btn.onclick = function() {
-//     btn.classList.add("active");
-//     videoClip.classList.add("active");
-// }
 
 
+// Play button for pop out 
 const playBtn = document.querySelector('.play-btn');
 const videoPopup = document.querySelector('.video-popup');
 const closeBtn = document.querySelector('.close-btn');
@@ -69,10 +62,15 @@ const video = document.querySelector('video');
 
 playBtn.addEventListener('click', () => {
   videoPopup.style.display = 'block';
+  video.controls = true; 
+  playBtn.style.display = "none"; 
 });
 
 closeBtn.addEventListener('click', () => {
   videoPopup.style.display = 'none';
+  video.pause(); 
+  video.currentTime = 0; 
+  playBtn.style.display = "block";
 });
 
 videoPopup.addEventListener('click', (event) => {
@@ -80,3 +78,6 @@ videoPopup.addEventListener('click', (event) => {
     videoPopup.style.display = 'none';
   }
 });
+
+// Mobile play button to enable video controls 
+
