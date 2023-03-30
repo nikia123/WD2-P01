@@ -4,6 +4,7 @@
 @use "footer" as *; 
 @use "nav" as *; 
 @use "typography" as *; 
+<<<<<<< Updated upstream
 @use "mixins" as *;
 @use "slick";
 @use "slick-theme";
@@ -182,3 +183,7 @@
     }
   }
 
+=======
+@use "main" as *; 
+@use "video" as *;
+>>>>>>> Stashed changes
