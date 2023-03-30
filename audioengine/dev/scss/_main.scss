@@ -1,26 +1,59 @@
 @use "variables" as *;
 @use "mixins" as *;
 @use "colour" as *;
-@use "typography" as *;
+@use "typography";
+@use "slick";
+@use "slick-theme";
 
-.news-wrap {
-    display: flex;
-    flex-direction: column;
-
-    img {
-        margin: 10rem;
-    }
+@media (max-width: 31.25em) {
+    .news-wrap {
+        display: flex;
+        flex-direction: column;
     
+        img {
+            margin: 1rem;
+        }
+    }
+}
+
+.news-ref {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .news-wrap {
-    display: flex;
-    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    
 
     img {
-        margin: 10rem;
+        margin: 0 auto;
+        padding: 1rem 3rem;
     }
+
+    slick-list {
+        @extend .news-wrap;
+
+    }
+}
+
+
+
+.slick-next {
+    background: url(../images/next-arrow.png);
+    color: coral;
+    z-index: 100;
+    width: 50px;
+    height: 81px;
     
+}
+
+.slick-prev {
+    background: url(../images/prev-arrow.jpg);
+    color: coral;
+    z-index: 100;
+    width: 50px;
+    height: 81px;
 }
 
 
