@@ -65,15 +65,19 @@ header {
 			}
 		}
 	}
+	//  No position absolute 
+	// active display block fit content 
+	// 
 	.nav-menu {
-		position: absolute;
-		top: -50%; 
-        left: 0;
+		// position: absolute;
+		// top: -40%; 
+        // left: 0;
 		flex-direction: column;
 		background-color: $blackColor;
 		width: 100%;
 		transition: 0.3s ease-in-out;
-		z-index: 99;
+		// transition: height 0.7s ease in out; 
+		// z-index: 99;
 	}
 	.nav-item {
 		padding: 1rem 0rem;
@@ -86,11 +90,13 @@ header {
 	}
 	.nav-menu.active {
 		// height: 300px;
+		// fitcontent in height 
 		padding: 1rem 0 1rem 0;
         top: 4rem;
 		.nav-item {
 		&:hover { 
 			transition: 0.2s ease-in-out;
+			// height for transition 
 			background-color:  $hover-color;
 		}
 	}
@@ -100,22 +106,30 @@ header {
 
 	.nav-right-logos { 
 		margin-left: 0.5rem;
+
 		a { 
 			padding: 0 0.3rem 0 0.3rem;
+			display: inline-block;
+			white-space: nowrap;
 		}
 	}
 	}
 }
 
 @media (min-width: 64rem) { 
-
 .nav-right-logos { 
-	margin: 1.2rem;
+	margin: 1rem;
+	white-space: nowrap;
+	li {
+		display: inline-block;
 	a { 
 		padding: 1rem 0.3rem; 
 	}
 }
 }
+}
+
+
 
 @media (min-width: 20rem ) { 
 	.audio-logo { 

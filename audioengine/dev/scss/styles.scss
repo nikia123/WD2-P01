@@ -7,6 +7,8 @@
 @use "mixins" as *;
 @use "video" as *;
 @use "main" as *;
+@use "slick";
+@use "slick-theme";
 
 * {
     margin: 0;
@@ -175,7 +177,7 @@
   }
   @media (min-width: 64rem) {
     .nav-right-logos {
-      margin: 1.2rem;
+      margin: 1rem;
     }
     .nav-right-logos a {
       padding: 1rem 0.3rem;
